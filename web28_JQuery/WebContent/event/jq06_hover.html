@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover() :: 마우스 이벤트 두가지(mouseenter, mouseleave)를 동시에 이미 가지고 있는 기능</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+ 		$('h2').hover(function(){
+ 			//mouseenter event
+ 			$(this).addClass('reverse');
+ 		}, function(){
+ 			//mouseleave event
+ 			$(this).removeClass('reverse');
+ 		});
+	}); //ready
+</script>
+<style type="text/css">
+	.reverse{background-color:blue}
+</style>
+</head>
+<body>
+<h2> Query doesn't 어쩌구저쩌구1</h2>
+<h2> Query doesn't 어쩌구저쩌구2</h2>
+<h2> Query doesn't 어쩌구저쩌구3</h2>
+</body>
+</html>

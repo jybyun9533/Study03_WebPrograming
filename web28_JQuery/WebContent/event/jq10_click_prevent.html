@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	
+ 	// 첫번째 h2 태그를 클릭하면 함수
+ 	/*
+ 	$('h2:eq(0)').click(function () {
+    	//클릭한 부분에 click
+    	$(this).html('<font color=red>CLICK</font>')
+    	alert('click() Calling');
+    	
+    //클릭 이벤트가 더 이상 작동하지 않도록 한다.
+    $(this).unbind();
+    });
+ 	*/
+ 	
+ 	$('h2:eq(0)').bind('click', function () {
+    	//클릭한 부분에 click
+    	$(this).html('<font color=red>CLICK</font>')
+    	alert('click() Calling');
+    	
+    //클릭 이벤트가 더 이상 작동하지 않도록 한다.
+    $(this).unbind();
+    });
+ 	
+ }); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h2> Query doesn't 어쩌구저쩌구1</h2>
+<h2> Query doesn't 어쩌구저쩌구2</h2>
+<h2> Query doesn't 어쩌구저쩌구3</h2>
+</body>
+</html>

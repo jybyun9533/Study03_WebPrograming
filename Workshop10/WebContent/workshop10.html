@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Encore Theater</title>
+  <style type = "text/css">
+
+  body{
+    background-color : #F1F1F1;
+    margin: 15px;
+  }
+  .nav{
+    background-color: #333;
+    height: 50px;
+    overflow: hidden;
+  }
+  .nav>a{
+    color: gray;
+    line-height: 50px;
+    float: left;
+    margin-left : 8%;
+    margin-right : 8%;
+    text-decoration:none;
+  }
+  .nav>a:hover{
+    color:white;
+  }
+
+  .banner{
+    height: 250px;
+    padding: 20px;
+    background-color: green;
+    border-radius: 25px;
+    margin-top: 10px;
+    width: 99%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .banner>img{
+    border-radius: 25px;
+    height: 270px;
+    float: right;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .info{
+    color: gray;
+    font-style: italic;
+    width : 1000px
+  }
+
+  .wrap{
+    float: left;
+    width : 1000px
+  }
+
+  .desc{
+    margin: 10px;
+    width: 1000px;
+    float: left;
+  }
+  #desc1{
+    margin: 10px;
+    width: 450px;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  #desc2{
+    margin: 10px;
+    width: 450px;
+    float: right;
+    box-sizing: border-box;
+  }
+
+  .menu{
+    width:200px;
+    height: 700px;
+    background-color: gray;
+    text-decoration:none;
+  }
+  .menu>ul{
+    text-align: center;
+    color: black;
+    text-decoration:none;
+  }
+
+</style>
+</head>
+<body>
+  <!-- 헤더-->
+  <h1> 엔코아 극장</h1>
+  <!-- 네비게이션 -->
+  <div class="nav">
+    <a href="#"><b>영화</b></a>
+    <a href="#"><b>극장</b></a>
+    <a href="#"><b>예매</b></a>
+    <a href="#"><b>이벤트</b></a>
+    <a href="#"><img src="img/rss.png" height="20px"><b> 상영영화소개.RSS</b></a> <!-- 앞에 이미지 삽입-->
+  </div>
+
+  <!--배경 이미지-->
+  <div class = "banner">
+    <h1 style="color : white; padding-top:35px"> 무공해 힐링 시네마</h1>
+    <p style="color : white; width : 500px; float: left; position: absolute; z-index:99;">무공해 힐링 시네마는 새로운F 개념의 영화장르의 한가지를 말하는 것입니다.
+      지친 영혼을 위한 휴직을 주는 영화나, 마음을 정화시키고 치유하는 힘을 가진 영화들...</p>
+      <img src="img/movie_image.jpg" ><br>
+    </div>
+
+    <!-- ############################################################################## -->
+
+
+
+    <div class = "wrap"> <!-- 1+2+3 -->
+      <!-- 영화 소개-->
+      <div class = "info"> <!-- 1번 -->
+        <h1 style="color:black; font-style:normal">쿵 푸 팬 더</h1>
+        <p><strong>개봉</strong> 2011. 5. 26</p>
+        <p><strong>감독</strong> 여인영 </p>
+        <p><strong>등급</strong> [국내] 전체 관람가</p>
+        <hr>
+      </div><!-- 1번 -->
+
+      <div class = "desc"><!-- 2+3 -->
+        <div id="desc1"> <!-- 2번 -->
+          <a style="background-color : yellow;">하.면.된.다-포.스.작.렬<br></a>
+          <p style="color:black">'평화의 계곡'에서 아버지의 국수 가게를 돕고 있는 팬더, 포.
+            아버지는 국수의 비법을 알려주어 가업을 잇게 하고 싶지만,
+            포의 관심사는 오로지 '쿵푸 마스터'. 가게일은 뒷전으로 하고
+            쿵푸의 비법이 적힌 용문서의 전수자를 정하는 '무적의 5인방' 대결을 보러
+            시합장을 찾은 포<br>
+            <img src = "img/movie_image3.jpg" style="width :500px;">
+          </p>
+        </div> <!-- 2번 -->
+        <div id="desc2"> <!-- 3번 -->
+          <p>
+            에게 떨어지는데.. 포는 쿵푸 마스터로 거듭날 수 있을까? 아니.. 포가 쿵푸를 할 수는 있을까?
+            똥배 안에 숨겨진 포스를 깨우기 위한 포의 도전이 시작된다!
+          </p>
+          <iframe width="500" height="300" src="https://www.youtube.com/embed/XDncZq_zVNs"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- 영상 삽입-->
+        </div><!-- 3번 -->
+      </div><!-- 2+3 -->
+    </div><!-- 1+2+3 -->
+
+    <div class = "menu" style="float:right"> <!-- 4번 -->
+      <h3> Movies </h3>
+      <ul>
+        <a href="#">현재상영작</a><br>
+        <a href="#">상영예정작</a><br>
+        <a href="#">영화뉴스</a><br>
+        <a href="#">테마뉴스</a><br>
+        <a href="#">맥스무비 예매순위</a><br>
+      </ul>
+    </div> <!-- 4번 -->
+  </body>
+  </html>

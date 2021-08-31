@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	 $(function(){
+ 		$('body').append('<h2>Happy Day</h2>');
+ 		// $('h2').prepend('<font color=red>오늘은 수요일</font>');
+ 		$('h2').before('<font color=red>오늘은 수요일</font>');
+ 		
+ 		// 이미지를 부착한다
+ 		var img1 = '<img src=../image/1.jpg>'
+ 		var img2 = '<img src=../image/2.jpg>'
+ 		var img3 = '<img src=../image/3.jpg>'
+ 		
+ 		var h1 = '<h1>싱어게인 TOP3</h1>';
+ 		
+ 		// 1. body 태그에 h1, img2, img3 순으로
+ 		$('body').append(h1, img1, img2, img3);
+ 		$('img').addClass('star');
+ 		
+ 	}); //ready
+</script>
+
+<style type="text/css">
+	.star {border:2px solid black; width: 200px;height:240;}
+</style>
+</head>
+<body>
+	
+	
+	
+</body>
+</html>

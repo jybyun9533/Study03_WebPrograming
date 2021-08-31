@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+</style>
+<script type = "text/javascript">
+function passCheck() {
+    // 전송버튼을 클릭했을때 진행되는 이벤트 기술
+    /*
+    	password와 repassword의 값이 일치하지 않으면 페이지이동X, 메시지 출력(alert)
+    */
+    var f = document.registerForm;
+    if(f.password.value!=f.repassword.value){
+    	alert("비밀번호가 일치하지 않습니다.")
+    	f.repassword.value="";
+    	f.repassword.focus();
+    	return false; // action이동 x
+    }
+    
+}
+
+function btnClick() {
+    alert("비밀번호가 일치하지 않습니다.")
+    }
+	
+</script>
+</head>
+<body>
+<form action="RMS" method="post" onsubmit="return passCheck()" name="registerForm">
+	<h1>Register Member Form</h1><br><br>
+	ID : <input type="text" name="id" required="required"><br>
+	PASSWORD : <input type="text" name="password" required="required"><br>
+	PASSWORD CONFIRM : <input type="text" name="repassword" required="required"><br>
+	NAME : <input type="text" name="name" required="required"><br>
+	ADDRESS : <input type="text" name="address" required="required"\><br>
+	<input type="submit" value="Member Register"><br><!-- 버튼 클릭시 함수 호출 되도록 이벤트연결 -->
+	<input type="button" value="CLICK" onclick="btnClick()">
+</form>
+
+</body>
+</html>

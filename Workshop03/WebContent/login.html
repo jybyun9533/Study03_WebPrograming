@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Web03_Workshop</title>
+<style>
+#wrap{ text-align:center; width:600px; height:200px; border: 1px solid; margin : 0 auto;}
+img{float :left; width : 200px; height:200px;}
+hr{border : 1px solid gray; width : 50%;}
+</style>
+</head>
+<body>
+
+<div id="wrap">
+	<img src="book.jpg">
+	<form action="MainServlet" method = "post">
+		<h3 align="center"> 로그인하여 주세요 </h3>
+		ID <input type="text" name = "id" required><br>
+		PASSWORD <input type="password" name="password" required><br>
+		<hr>
+		<input type ="submit" value="LOGIN">
+	</form>
+</div>
+</body>
+</html>

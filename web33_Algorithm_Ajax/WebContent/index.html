@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Java Call</title>
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+	
+		// count
+		$('#exec1').click(function () {
+    		//TextArea에 입력된 값을 받아온다.
+    		var words = $('#words').val(); //이 값을 Servlet으로 연결 서블릿이 Count의 메소드로 인자값을 넘기도록
+    		
+    		$.ajax({
+				url:'main.do?command=wordCount',
+				type:'post',
+				data:{"words":words},
+				
+				error:function (xhr, status, message){
+    				alert("error : " + message);
+				},
+				success:function (result){
+						$('#result1').html(result);
+				}   	
+    		});// ajax
+		}) //count
+		
+		// kick
+		$('#exec2').click(function () {
+			var fname = $('#fname').val();
+			$.ajax({
+				url:'main.do?command=kickCount',
+				type:'post',
+				data:{"fname":fname},
+				
+				error:function (xhr, status, message){
+    				alert("error : " + message);
+				},
+				success:function (result){
+					$('#result2').html(result);
+				}   	
+    		});// ajax
+		}); // kick
+		
+	}); // ready
+</script>
+<style type="text/css">
+	.quest{
+		padding:50px;
+		width:500px;
+		height:250px;
+		border:2px dashed blue;
+		background-color:rgb(234,234,234);
+	}
+	.kick{
+		display:inline-block;
+		width:100px;
+	}
+	#result1, #result2{
+		font-size:1.5em;
+		color:red;
+	}
+	.btn{
+		width:100px;
+	}
+	h2{
+	height:50px;
+	}
+	div{
+	margin:10px
+	}
+
+</style>
+</head>
+<body>
+	<div id="q1"  class="quest">
+			<h2>단어세기</h2>
+			<div><span id="ins">입력 문자열 : </span><textarea  id="words" cols="45" rows="5"></textarea> </div>
+			<div><input type="button" id="exec1" class="btn" value="실 행"> 가장 많이 나온 단어 :	<span id="result1"  ></span></div>			
+	</div>
+	<div id="q2" class="quest">
+		<h2>Kickboard</h2>
+		<div><span class="kick">입력 파일명:</span><input type="text" id="fname" ></div>
+		<div> <input type="button"	id="exec2" class="btn" value="실 행"> 갈수 있는 경로의 수 : <span id="result2">  </span></div>
+	</div>
+</body>
+</html>

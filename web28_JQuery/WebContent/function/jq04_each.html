@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+/*
+  each()
+  ::
+  일종의 for문과 동일한 기능
+  동일한 태그가 반복적으로 나왔을때 사용한다.
+  작동방식은
+  동일한 태그의 갯수만큼(h1) each()함수가 호출된다.
+  내부적으로 index가 가동되고 있다.
+  첫번째 index는 당연히 0이된다. 
+ 
+ */
+	$(function() {	
+		$('h1').each(function(index) { //index 0~7
+			$(this).addClass('high_light_'+index);//현재 이벤트(each) 적용을 받고있는 태그 자기자신...
+		});	//each
+		
+		//1. 마지막 h1태그를 선택자로 지정...font 클래스 속성을 연결
+		$('h1:last').addClass('font');
+		
+		//2. h1태그중에서 짝수번째(2의 배수) 태그를 선택자로 지정...nth 클래스 속성을 연결
+		$('h1:odd').addClass('nth');
+	}); 
+</script>
+<style type="text/css">
+	.high_light_0 {background: yellow; }
+	.high_light_1 {background: pink; }
+	.high_light_2 {background: cyan; }
+	.high_light_3 {background: green; }
+	.high_light_4 {background: purple; }
+	.high_light_5 {background: magenta; }
+	.high_light_6 {background: gray; }
+	.high_light_7 {background: orange; }
+	
+	/* 속성 2개를 더 추가  */
+	.font{ color: blue;  font-family: 굴림체; }
+	.nth{  border: 5px double black;}
+</style>
+</head>
+<body>
+	<h1>Item - 0</h1>
+	<h1>Item - 1</h1>
+	<h1>Item - 2</h1>
+	<h1>Item - 3</h1>
+	<h1>Item - 4</h1>
+	<h1>Item - 5</h1>
+	<h1>Item - 6</h1>
+	<h1>Item - 7</h1>
+</body>
+</html>

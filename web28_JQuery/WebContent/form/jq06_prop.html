@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		$('#checkBtn1').click(function() {
+			//checkbox 폼에 prop()적용해서 check가 되도록 로직을 작성
+			$('#mailing').prop('checked',true);
+		});
+		
+		$('#checkBtn2').click(function() {
+			//checkbox 폼에 prop()적용해서 check가 되도록 로직을 작성
+			$('#mailing').prop('checked',false);
+		});
+		
+	}); 
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	메일 확인 :: <input type="checkbox" id="mailing">
+	<input type="button" value="체크하기" id="checkBtn1">
+	<input type="button" value="체크해제하기" id="checkBtn2">
+</body>
+</html>

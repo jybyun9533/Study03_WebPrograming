@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/sunny/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+ 	#clothing{margin-left:5px; width : 600px; float:left;}
+ 	#cart{margin:0px; width:450px;float:left; padding:2em;margin-top:10px;}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+   	// 1. 어코디언 적용
+  	$('#catalog').accordion({
+    	heightStyle : 'content'
+  	});
+   
+	// 2. draggable 적용
+   	$("#catalog li").draggable({
+   		helper:'clone',
+   		appendTo :'#cart'
+  	});
+  	
+  	// 3. droppable 적용
+  	$("#cart ol").droppable({
+   		drop:function (event, ui) {
+   			$(this).find('.placeholer').remove();
+    		var uidrag=ui.draggable.text();
+    		
+    		$(this).append('<li>'+uidrag+'</li>');
+		}
+  	});
+  	
+  });
+  	
+  </script>
+</head>
+<body>
+	<div id = "clothing">
+		<h2 class="ui-widget-header">카탈로그</h2>
+		<div id = "catalog">
+		
+			<h2><a href="#"> 상의류</a></h2>
+			<div>
+				<ul>
+					<li>셔츠</li>
+					<li>블라우스</li>
+					<li>니트티</li>
+					<li>가디건</li>
+					<li>점퍼</li>
+					<li>바바리</li>
+				</ul>
+			</div>
+		
+			<h2><a href="#"> 하의류</a></h2>
+			<div>
+				<ul>
+					<li>슬렉스</li>
+					<li>청바지</li>
+					<li>숏팬츠</li>
+					<li>칠부바지</li>
+				</ul>
+			</div>
+		
+			<h2><a href="#">악세서리</a></h2>		
+			<div>
+				<ul>
+					<li>시계</li>
+					<li>백팩</li>
+					<li>핸드백</li>
+					<li>지갑</li>
+					<li>목걸이</li>
+					<li>귀걸이</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+ 
+ 	<!-- drop할 영역을 지정..cart -->
+ 	<div id = "cart">
+ 		<h2 class = "ui-widget-header">Clothing Cart</h2>
+ 		<div class="ui-widget-content">
+ 			<ol>
+ 				<li class = "placeholer"> Dropping Here</li>
+ 			</ol>
+ 		</div>
+ 	</div>
+</body>
+</html>

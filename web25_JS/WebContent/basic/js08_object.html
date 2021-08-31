@@ -1,0 +1,47 @@
+<!-- 
+자바에서 객체생성을 많이 다뤄보았다.
+클래스를 타입으로 객체가 생성된다.
+
+하지만,
+자바스크립트에서의 객체를 생성할 때 클래스 같은건 없다.
+자바스크립트에서의 객체란?
+속성과 메소드를 가진 구현체
+
+자바스크립트에서 객체의 유형
+1. 리터럴 객체, JSON객체 - {name:'James', age:44}; yaml
+2. 생성자 객체 - 생성자 함수를 사용
+3. 함수형 객체
+4. 배열 객체 - [ ]
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//1. 리터럴 객체 이용
+var obj1 = {name:'제임스', age:44, phone:'010-2790-0755'};
+console.log(obj1);
+
+//2. 생성자 객체
+var obj2 = new Object();
+obj2.name="제임스";
+obj2.age = 44;
+obj2.phone = "010-2790-0755";
+console.log(obj2);
+
+//3. 함수를 이용한 객체
+obj2.getInfo=function() {
+	return this.name+" 님의 나이는 "+this.age;
+}
+console.log(obj2.getInfo());
+
+//4. 배열 객체... 다른 타입의 값 저장 가능, 키값이 별도로 존재하지 않는다.
+var obj4 = [1, 22, 'JS', 'Python'];
+console.log(obj4);
+</script>
+</head>
+<body>
+
+</body>
+</html>

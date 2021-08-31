@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		//select폼에서 선택한 값
+		//1.
+		/* var name=$('select>option:selected').val();
+		alert(name); */
+		
+		//2. 일정한 시간뒤에 코드로직이 동작하도록..수정..setTimeout
+		/* setTimeout(function() {
+			//3초 뒤에 해당 코드가 동작한다..
+			var name=$('select>option:selected').val();
+			alert(name);
+		}, 3000); */
+		
+		//3. 5초 뒤에 선택한 가수이름이 폼에 출력되도록 
+		setTimeout(function() {
+			//5초 뒤에 해당 코드가 동작한다..
+			var name=$('select>option:selected').val();
+			$('input[type=text]').val(name);
+		}, 5000); 
+	}); 
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<select>
+		<option>정홍일</option>
+		<option>이승윤</option>
+		<option>이무진</option>
+		<option>아이유</option>
+	</select>
+	<br/><br/>
+	선택한 가수는 <input type="text" name="result" size="16">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

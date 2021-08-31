@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		$('#eachBtn').click(function() {
+			var arr = []; //배열 선언과 생성
+			arr.push('아이유');
+			arr.push('이승윤');
+			arr.push('이무진');
+			arr.push('정홍일');
+			
+			//alert(arr.length);
+			//alert(arr.toString());
+			
+			//each()....for문과 동일한 기능..
+			var str = "";
+			/* 
+			for(var i=0; i<arr.length; i++) {
+				str += arr[i]+" ";
+			}
+			alert(str); 
+			*/
+			
+			//1. each() 함수 사용 :: 동일한 태그가 여러개 있을때 태그의 갯수만큼 each() 호출된다.
+			//   배열 안에있는 데이타의 갯수만큼 each() 가 호출된다.
+			
+			/* $(arr).each(function(index) {
+				str += arr[index]+" "
+			});
+			alert(str);  */
+			
+			
+			//2.
+			/* $.each(arr, function(index) {
+				str += index+1+"."+arr[index]+" "
+			});
+			alert(str); */
+			
+			//3.
+			 $.each(arr, function(index,item) {
+					//str += index+1+"."+item+" ";
+				 str += item+" ";
+				});
+				alert(str);
+		});
+		
+	}); 
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<input type="button" value="배열에 each() 적용하기" id="eachBtn">
+</body>
+</html>
+
+
+

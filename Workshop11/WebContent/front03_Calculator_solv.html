@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+		h2{ margin-left:60px;}
+		#calc{
+			border:1px solid gray;
+			width:350px;
+			text-align: center;
+		}
+		#formula{
+			text-align: right;
+			width:80%;
+			margin-top:10px;
+			margin-bottom:20px;
+		}
+		#resultDiv{
+			text-align: left;
+			margin-left:40px;
+		}
+		button{
+			width:70px;
+			height:70px;
+		}
+</style>
+</head>
+<body>
+<h2>Encore Calculator</h2><p></p>
+	<div id="calc">
+		<input type="text" id="formula" value="" placeholder="0.0" readonly/>
+		<div id="pad">
+			<button onclick="addNum(7)">7</button>
+			<button onclick="addNum(8)">8</button>
+			<button onclick="addNum(9)">9</button>
+			<button onclick="addOper('+')">+</button>
+			<button onclick="addNum(4)">4</button>
+			<button onclick="addNum(5)">5</button>
+			<button onclick="addNum(6)">6</button>
+			<button onclick="addOper('-')">-</button>
+			<button onclick="addNum(1)">1</button>
+			<button onclick="addNum(2)">2</button>
+			<button onclick="addNum(3)">3</button>
+			<button onclick="addOper('*')">*</button>
+			<button onclick="addNum(0)">0</button>
+			<button onclick="reset()">CE</button>
+			<button onclick="calc()">=</button>
+			<button onclick="addOper('/')">/</button>
+		</div>
+		<div id="resultDiv">
+			<h2>결 과 이 력</h2>
+			<p id="result"></p>
+		</div>
+	</div>
+<script type="text/javascript">
+	var preIsNum = false;
+	var formula = document.getElementById("formula");
+	
+	function addNum(n){
+		if(formula.value == "" && n == 0 )
+			return;
+		formula.value += n; 
+		preIsNum = true;
+	}
+	
+	function addOper(n){
+		if(preIsNum == false)
+			return;
+		formula.value += n; 
+		preIsNum = false;
+	}
+	
+	function reset(){
+		formula.value = "";
+	}
+	
+	var result = document.getElementById("result");
+	var count = 0;
+	function calc(){
+		if(preIsNum == false)
+			return;
+		result.innerHTML += (++count) +". "+ formula.value+"="+eval(formula.value)+"<br/>";
+		formula.value = "";
+		preIsNum = false;
+	}
+
+</script>
+</body>
+</html>

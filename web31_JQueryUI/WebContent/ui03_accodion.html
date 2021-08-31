@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/sunny/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion({
+    	heightStyle : 'content'
+    });
+  
+  	// 1. h3태그를 클릭하면 함수 호출
+  	$('#accordion h3').click(function () {
+  		var text = $(this).text();
+  		
+  		// 비동기 로직
+  		if(text=="Encore Academy Introduction"){
+  			
+  		} else if(text =="AI Education Subject"){
+  			$.ajax({
+  				type:'post',
+  				url:'subject.do',
+  				
+  				success:function (result) {
+    				$('#subject').html(result);
+				} //callback
+  			}); // ajax
+  		} else if(text == "Association Global Ai Company"){
+  			$.ajax({
+  				type:'post',
+  				url:'company.do',
+  				
+  				success:function (result) {
+    				$('#aicom').html(result);
+				} //callback
+  			}); // ajax
+  		}
+	});
+	
+	$('#createSection').click(function () {
+    	var footercontent = "<h3>How to Get</h3><div>서울 서초동 458 엔코아 플레이데이타 빌딩 201호 1강의장</div>";
+    	
+    	// 버튼 없애기..remove()
+    	$(this).remove();
+    	
+    	// 동적으로 어코디언을 만들때에는 'destroy'옵션으로 이전 어코디언을 완벽히 삭제한 후 다시 어코디언을 생성
+    	$('#accordion').append(footercontent).accordion('destroy').accordion({
+    		heightStyle : 'content'
+    	});
+	});
+	
+  }); // function
+  </script>
+</head>
+<body>
+	<div id="accordion">
+	
+		<h3>Encore Academy Introduction</h3>
+		<div>
+			플레이 데이타의 새로운 교육 프로그램을 소개합니다.<br>
+			아래 섹션에서 이수할 교육과목을 확인하시기 바랍니다.
+		</div>
+		
+		<h3>AI Education Subject</h3>
+		<div id = "subject">
+		
+		</div>
+		
+		<h3>Association Global Ai Company</h3>
+		<div id ="aicom">
+		
+		</div>	
+	</div> 
+	
+	<hr>
+	
+	<input type="button" value="Create Section Addiction" id= "createSection">
+</body>
+</html>

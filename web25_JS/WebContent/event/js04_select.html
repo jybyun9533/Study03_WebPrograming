@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function itemChange(){
+		//alert("itemChange()...");
+		
+		var subway = document.getElementById("sline");
+		if(subway.value!=null){ //선택한 노선이 있다면...
+			alert(subway.value+" 호선 선택!");
+		}
+	}
+</script>
+</head>
+<body>
+<form name = "frm" id="frm">
+	<select id="sline" onchange="itemChange()">
+		<option value="">----호선----</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+	</select>
+</form>	
+</body>
+</html>

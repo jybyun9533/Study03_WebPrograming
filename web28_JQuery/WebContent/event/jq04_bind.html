@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bind():: 하나 혹은 여러개의 이벤트를 묶어주는 기능</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	$('h2').bind('click', function(){
+ 		// $(this).html('hello');
+ 		
+ 		/*
+ 		$(this).html(function (index, html) {
+    		return html+' Hello';
+		}); // html
+		*/
+		
+		$('h2').html(function (index, html) {
+    		switch(index){
+    			case 0 : return html + '&';
+    			case 1 : return html + '@';
+    			case 2 : return html + '*';
+    		}
+		});
+ 	}); //bind
+ }); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h2> Query doesn't 어쩌구저쩌구1</h2>
+<h2> Query doesn't 어쩌구저쩌구2</h2>
+<h2> Query doesn't 어쩌구저쩌구3</h2>
+</body>
+</html>

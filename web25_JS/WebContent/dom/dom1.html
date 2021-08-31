@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		//1. 노드 생성(태그, 내용)
+		var h1 = document.createElement('h1'); //<h1></h1>
+		var text = document.createTextNode('Hello DOM!!');
+		
+		//2. 생성한 노드를 연결...기존의 태그에 연결
+		h1.appendChild(text);
+		document.body.appendChild(h1);
+		
+		//3. 이미지 태그를 생성
+		var img = document.createElement('img');
+		img.setAttribute('src', '../img/jack.jpg');
+		img.setAttribute('width', 300);
+		img.setAttribute('height', 350);
+		
+		//body 밑에 붙인다.
+		document.body.appendChild(img);
+	};
+</script>	
+</head>
+<body>
+
+</body>
+</html>

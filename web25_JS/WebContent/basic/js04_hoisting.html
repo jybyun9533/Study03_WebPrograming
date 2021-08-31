@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+함수 선언 방법
+1. 익명함수 선언법
+ 	var func = function(){// }
+ 	
+2. 선언적 함수 선언
+	function name(){// }
+ -->
+<script>
+//1. 
+/*	var name = "James"; //전역변수..함수 선언 바깥에 정의
+	
+	function showName() {
+		var name = "Peter";//지역변수..함수 선언 안쪽에 정의
+		console.log(name); //Peter
+	}
+	
+	console.log(name); //James
+	showName(); */
+	
+/*
+   	some을 선언하지 않고 바로 사용함으로써 에러가 나야하지만
+   	에러가 출력되지 않는다.
+   	나중에 var some 이 부분이 선언되는 것처럼 보이지만
+   	사실상 함수 최상단에 var some 이 부분(선언부)이 끌어올려진다.
+   	중요한 것은 값이 hoisting 되는건 아니다.
+ */
+	
+	//2. 
+	
+	dosomething();
+	
+	function dosomething(){ //선언적 함수 선언
+		alert("정의되어 있지 않는 변수 "+some); //2.
+	
+		// var some = "Hello Function!!!"; //1. (그래서, 메모리에 올라가는 순서) 선언부가 함수 최상단으로 끌어올려진다.
+		//some = "Hello"; 이건 에러..
+		alert("정의되어 있는 변수 "+some);//3.
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

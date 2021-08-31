@@ -1,0 +1,37 @@
+<!-- 
+DOM
+html 문서의 조작과 관련된 api
+html 문서 생성, 삭제, 변경, 검색... 등등이 가능하다.
+
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript">
+	window.onload = function(){
+		//1.
+	/*	var header1 = document.getElementById("header1");
+		var header2 = document.getElementById("header2");
+		var header3 = document.getElementById("header3"); 
+		
+		header1.innerHTML = '<h4><font color=red>Using getElementById()...</h4>'; */
+		
+		//2. 
+		var headers = document.getElementsByTagName('h1');
+		//alert(headers);
+		//alert(headers.length);//3
+		for(var i=0; i<headers.length; i++){
+			headers[i].innerHTML = "Using getElementsByTagName()..."
+		}
+	};
+</script>
+</head>
+<body>
+	<h1 id="header1">Header - 1</h1>
+	<h1 id="header2">Header - 2</h1>
+	<h1 id="header3">Header - 3</h1>
+</body>
+</html>

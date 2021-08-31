@@ -1,0 +1,23 @@
+package project.model;
+
+public class Shop {
+	//Field
+	private String shopId;
+	private String shopName;
+	private String shopAddr;
+	private String shopContact;
+	
+	public Shop() {
+		
+	}
+	
+	public Shop(String shopId, String shopName, String shopAddr, String shopContact) {
+		super();
+		this.shopId = shopId;
+		this.shopName = shopName;
+		this.shopAddr = shopAddr;
+		this.shopContact = shopContact;
+	}
+	
+	
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;web18_JSTL/WebContent/CIF_result.jsp&apos; to &apos;CIF3_result.jsp&apos;" description="Rename resource &apos;CIF_result.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/CIF_result.jsp" name="CIF3_result.jsp" stamp="1617759149002" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;web18_JSTL/WebContent/CForEach.jsp&apos; to &apos;CForEach5.jsp&apos;" description="Rename resource &apos;CForEach.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/CForEach.jsp" name="CForEach5.jsp" stamp="1617759809683" updateReferences="true"/>
+</session>

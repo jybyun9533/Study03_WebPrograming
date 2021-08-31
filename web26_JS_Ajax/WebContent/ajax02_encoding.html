@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript">
+	var xhr;
+	var nickfrm;
+	
+	function startRequest() {
+	xhr = new XMLHttpRequest();
+	alert(xhr.readyState); // 0
+	
+	nickfrm = document.frm.nick;
+	
+	xhr.onreadystatechange = callback;
+	
+	alert(xhr.readyState);//0
+	
+	xhr.open("get", "EncodingServlet?nickname="+ encodeURI(encodeURIComponent(nickfrm.value)));
+	alert(xhr.readyState);//1
+	
+	xhr.send(null);
+	alert(xhr.readyState); //1
+	}
+	
+	function callback() {
+		alert("callback..");
+		
+		if(xhr.readyState==4){ //xhr객체가 안전하게 브라우저로 다시 잘 안착했다면
+			if(xhr.status==200){ //서버로 가서 작업한 일이 잘 수행되었다면.
+				document.getElementById("resultView").innerHTML 
+				= "<font color=orange size=5>" + decodeURI(decodeURIComponent(xhr.responseText))+ "</font>"
+			}
+		} else{
+			document.getElementById("resultView").innerHTML 
+				= "<img src = 'img/a.gif'>";
+		}
+		nickfrm.value="";
+		nickfrm.focus();
+	}
+</script>
+
+</head>
+<body>
+<h2>JavaScript Get방식에서 한글 처리하기</h2>
+<form name = "frm">
+닉네임 <input type="text" name = "nick">
+<input type="button" value="닉네임보내기" onclick="startRequest()">
+<div id="resultView"></div>
+</body>
+</html>

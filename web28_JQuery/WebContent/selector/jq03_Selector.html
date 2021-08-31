@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		//1.input태그의 속성이름 type, 속성값 text인 선택자를 지정...val() 폼값 받아오거나 값 입력할때 사용(JavaScript에서의 value)
+		//$('input[type=text]').val("Hello JQuery!!");
+		
+		//$('input:text').val("Hello JQuery!!");//다 들어간다
+		//$(':text').val("Hello JQuery!!");
+		
+		//input 태그의 속성이름이 name이고 속성값에 한국이 포함되어 있는 선택자를 지정
+		//$('input[name~=한국]').css('background','yellow'); //단어로써 포함여부
+		$('input[name*=한국]').css('background','yellow'); //글자만 있으면 다 된다.
+		
+		//속성값이 사람으로 끝나는지 여부, ~ 단어로 시작하는지 여부
+		$('input[value$=사람]').css('color','red');
+		$('input[value^=KO]').css('color','blue');
+	}); 
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h3> 폼 속성 선택자 사용법</h3>
+<input type="text">
+<input name="한국" value="한국">
+<input name="한국인" value="한국인">
+<input name="한국 민" value="한국 민">
+<input name="대 한국 민" value="대 한국 민">
+<br/><hr><br/>
+<input id="한국" value="한국사람">
+<input id="한국인" value="KO한국인">
+<input id="한국 민" value="한국 민">
+<input id="대 한국 민" value="대 한국 민">
+</body>
+</html>

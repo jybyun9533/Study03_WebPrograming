@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	$('#send').one('click',function () {
+    	$.ajax({
+    		type:'post',
+    		url:'http://localhost:8888/weather.xml',
+    		/* 응답시 전달되는 데이터 타입의 형태를 지정.. json 일때는 주로 작성한다. xml, text, json */
+    		dataType:'xml',
+    		
+    		success:function (result) {
+    			var str='';
+    			$(result).find('list').each(function(index, item) {
+    				var region = $(this).find('region').text(); //html()과 동일
+    				var wind = $(this).find('wind').text();
+    				var temp = $(this).find('temp').text();
+    				var rain = $(this).find('rain').text();
+    				
+    				str +='<tr>';
+    				str +='<td>'+region+'</td>';
+    				str +='<td>'+wind+'</td>';
+    				str +='<td>'+temp+'</td>';
+    				str +='<td>'+rain+'</td>';
+    				str += '</tr>'
+				}); // each
+				
+				//위의 내용을 table 아래의 tbody에 붙인다. 이때 기존의 데이터는 다 지우고 붙여야 함.
+				$('tbody tr:gt(0)').remove();
+				$('tbody').append(str);
+			},
+				error:function () {
+					    	
+				}
+    	}); //ajax
+	}); //one
+ }); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<h2>===OPEN API===</h2>
+	<a href="#" id="send"> XML 데이터 서버로 요청하기</a>
+	<p></p>
+	<table border="2" id="table" width="60%">
+		<thead>
+			<Tr>
+				<th>지역</th><th>바람세기</th><th>온도</th><th>강수확률</th>
+			</Tr>
+		</thead>
+		<tbody>
+			<!-- 출력 -->
+			
+		</tbody>
+	</table>
+</body>
+</html>

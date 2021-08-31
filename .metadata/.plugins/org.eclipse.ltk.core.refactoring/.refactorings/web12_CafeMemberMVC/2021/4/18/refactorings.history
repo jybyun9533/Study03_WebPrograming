@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;config&apos; to &apos;project/src&apos;&#x0D;&#x0A;- Original project: &apos;web12_CafeMemberMVC&apos;&#x0D;&#x0A;- Destination element: &apos;project/src&apos;&#x0D;&#x0A;- Original element: &apos;web12_CafeMemberMVC/src/config&apos;" description="Copy package" destination="=project/src" element1="/src&lt;config" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1619506710160" version="1.0"/>
+</session>

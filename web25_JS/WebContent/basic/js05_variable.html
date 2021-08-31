@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">	
+	var myName = "peter"; //전역변수
+	name = "James"; //자동적으로 전역변수에 추가된다.
+	
+	console.log(myName); //Peter
+	console.log(name); //James
+	function showAge(){
+		//var age = 90; //지역변수
+		//let age = 90; 로컬변수 ...let, const...es6에서 추가된 문법
+		  age = 90; //전역변수
+		//console.log(age);
+	}
+	showAge();
+	
+	console.log(age); //90
+</script>	
+</head>
+<body>
+
+</body>
+</html>

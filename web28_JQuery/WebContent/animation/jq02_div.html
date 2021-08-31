@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	// 1. div를 클릭하면 함수호출 되도록.=> 각각의 div 영역이 오른쪽으로 500만큼 이동
+ 	/*
+ 	$('div').click(function(){
+ 		$(this).animate({
+ 			left:500
+ 		},'slow');
+ 	});
+ 	*/
+ 	
+ 	// 2.hover() 이용해서 오른쪽으로 500갔다가 다시 원래자리로 
+ 	/*
+ 	$('div').hover(function () {
+ 		$(this).animate({
+ 		left:500
+ 		}, 'slow');
+ 	}, function(){
+ 		$(this).animate({
+ 		left:0
+ 		}, 'fast');
+ 	});
+ 	*/
+ 	
+ 	// 3. 영역을 클릭할때 마다 점점 커지도록    
+ 	$('div').click(function () {
+ 		$(this).animate({
+    		width:'+=80',
+    		height:'+=80'
+    		})
+	});
+ 	
+ 	
+ }); //ready
+</script>
+<style type="text/css">
+	div{
+		width:70px;
+		height:70px;
+		border:2px solid red;
+		position:relative;
+	}
+</style>
+</head>
+<body>
+	<div></div><div></div>
+	<div></div><div></div>
+	<div></div><div></div>
+</body>
+</html>

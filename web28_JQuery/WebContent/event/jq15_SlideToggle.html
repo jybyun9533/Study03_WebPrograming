@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	// 1. 페이지가 로드되자마자 일단 모든 이미지를 숨긴다
+ 	$('.image').hide();
+ 	
+ 	// 2. 첫번째 이미지가 보여지도록
+ 	$('.image:first').show();
+ 	
+ 	// 3. 보이는 이미지를 클릭할때마다 다음번 이미지가 보이도록.. 슬라이딩 효과
+ 	$('.image').click(function (event) {
+ 	//click을 해제하는 .. unbind()
+ 	//a태그의 가장 기본적인 이벤트(href)를 해제하는 기능.. preventDefault();
+ 		event.preventDefault();
+   		$(this).next().show(2000);
+   		
+   		var next = $(this).next().length?$(this).next():$('.image:first');
+   		
+   		/*
+   		$(this).hide(2000);
+   		next.show(3000);
+   		*/
+   		
+   		/*
+   		$(this).fadeOut(2000);
+   		next.show(3000);
+   		*/
+   		
+   		$(this).slideToggle(2000);
+   		next.slideToggle(3000);
+   		
+   		
+   		
+	});
+	 	
+ }); //ready
+</script>
+<style type="text/css">
+	.image{position:absolute; top :30px; left:30px;}
+</style>
+</head>
+<body>
+	<a class="image" href="http://jquery.com">
+		<img alt="" src="../image/1.jpg" width="300" height="370">
+	</a>
+	<a class="image" href="http://jquery.com">
+		<img alt="" src="../image/2.jpg" width="300" height="370">
+	</a>
+	<a class="image" href="http://jquery.com">
+		<img alt="" src="../image/3.jpg" width="300" height="370">
+	</a>
+	<a class="image" href="http://jquery.com">
+		<img alt="" src="../image/4.jpg" width="300" height="370">
+	</a>
+	<a class="image" href="http://jquery.com">
+		<img alt="" src="../image/5.jpg" width="300" height="370">
+	</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+div{
+width:100px;
+height:100px;
+background-color:red;
+border : solid black 2px;
+/*margin : 0 30px 0 30px;*/
+margin : 30px 10px; /*<!-- 상하 // 좌우 -->*/
+padding : 10px;
+}

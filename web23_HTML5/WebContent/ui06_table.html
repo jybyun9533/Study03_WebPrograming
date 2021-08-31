@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table에 hover 효과주기</title>
+<style = "css/text">
+	td{
+		text-align:center;
+	}
+	tfoot{
+		background-color:pink;
+	}
+	table>tbody>tr:hover{
+		background-color:yellow;
+	}
+</style>
+
+</head>
+<body>
+<h2 align="center"> Table에 Hover 효과주기 </h2>
+<table align="center" border="2" width="40%">
+	<caption>Table Caption</caption>
+	<colgroup>
+		<col span="2" style="background: red"> 
+		<col style="background: blue">
+	</colgroup>
+	
+	<thead>
+	<tr>
+		 <th>NO</th><th>NAME</th><th>ADDRESS</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan ="3">1</td>
+	</tr>
+	
+		<tr>
+			<td>1</td><td>AAA</td><td>LA</td>
+		</tr>
+		<tr>
+			<td>2</td><td>BBB</td><td>NY</td>
+		</tr>
+		<tr>
+			<td>3</td><td>CCC</td><td>Texas</td>
+		</tr>
+	</tbody>
+	<tfoot style="background: yellow">
+		<tr>
+			<td>111</td>
+			<td>222</td>
+			<td>333</td>
+		</tr>
+	</tfoot>
+</body>
+</html>

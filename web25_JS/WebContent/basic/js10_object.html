@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>JavaScript Object :: JSON</h2>
+<div id="view">
+</div>
+<script>
+	var person={
+			firstName:"James",
+			lastName:"Gosling",
+			age:50,
+			eyecolor:"Brown",
+			fullName:function(){
+				return this.firstName+" "+this.lastName;
+			}
+	};
+	
+	document.getElementById("view").innerHTML = "<h3>"+person.fullName()+"</h3>";
+</script>
+</body>
+</html>

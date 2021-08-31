@@ -1,0 +1,13 @@
+package project.model;
+
+public class Menu {
+	// Field
+	private String menuId;
+	private int menuType; // 1:pizza, 2:sidemenu, 3:topping
+	private String menuName;
+	private int menuPrice;
+	private String menuSize;
+	private String menuDesc;
+	
+	
+}

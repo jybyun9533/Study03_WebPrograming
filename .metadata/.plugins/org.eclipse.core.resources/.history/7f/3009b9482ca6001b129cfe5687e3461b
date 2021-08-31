@@ -1,0 +1,29 @@
+package project.model;
+
+public class Customer {
+	// Field
+	private String custId;
+	private String custPw;
+	private String custName;
+	private String custAddr;
+	private String custContact;
+	private String custEmail;
+	private int custTotalPrice;
+
+	// Constructor
+	public Customer() {
+	}
+
+	public Customer(String custId, String custPw, String custName, String custAddr, String custContact,
+			String custEmail, int custTotalPrice) {
+		super();
+		this.custId = custId;
+		this.custPw = custPw;
+		this.custName = custName;
+		this.custAddr = custAddr;
+		this.custContact = custContact;
+		this.custEmail = custEmail;
+		this.custTotalPrice = custTotalPrice;
+	}
+
+}

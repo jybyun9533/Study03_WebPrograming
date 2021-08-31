@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+ 		$('h2').bind({
+ 			mouseenter:function(){ // 마우스가 특정 영역안으로 진입했을 때
+				$(this).addClass('reverse');
+ 			}, 
+ 			mouseleave:function(){ // 마우스가 특정 영역밖으로 빠져나왔을 때
+ 				$(this).removeClass('reverse');
+ 			}
+ 		});
+ 	}); //ready
+</script>
+<style type="text/css">
+	.reverse{background-color:blue}
+</style>
+</head>
+<body>
+<h2> Query doesn't 어쩌구저쩌구1</h2>
+<h2> Query doesn't 어쩌구저쩌구2</h2>
+<h2> Query doesn't 어쩌구저쩌구3</h2>
+</body>
+</html>

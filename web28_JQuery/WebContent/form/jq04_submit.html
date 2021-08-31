@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {	
+	//submit() 함수를 사용...선택자는 form으로 준다.
+	$('#frm').submit(function() { //JavaScript에서의 onsubmit 속성과 동일
+		//1. 폼값 받는다.
+		var id = $('#id').val();
+		var pass = $('input[name=pass]').val();
+		var name = $(':text[name=name]').val();			
+		
+		//2. confirm() 창으로 연결한다...확인 / 취소....return
+		return confirm(name+" 님의 정보를 서버로 전송할까요?");
+	}); //submit
+});
+</script>
+</head>
+<body>
+<h2>Form에서 전송한 값을 Jquery에서 받아서 처리한 후 서버로 전송하는 방법</h2>
+<form action="04_result.jsp" id="frm">
+ID : <input type="text" name="id" id="id"><p>
+PASSWORD : <input type="password" name="pass" id="pass"><p>
+NAME : <input type="text" name="name" id="name"><p>
+<p>
+
+<input type="submit" value="SEND">
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

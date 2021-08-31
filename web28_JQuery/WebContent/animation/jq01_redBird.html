@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate() :: 컨텐츠를 움직이게 하는 기능 :: 상하좌우(top)</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	/*
+ 	$('img').animate({left:'400px'},'fast');
+ 	$('img').animate({left:'100px', width:'+200px'},'slow');
+ 	
+ 	$('img').animate({width:'+100px'},'slow');
+ 	
+ 	$('img').animate({height:'100px'},'slow');
+ 	
+ 	$('img').animate({top:'300px'},'fast');
+ 	$('img').animate({left:'400px', width:'+100px'},'slow');
+ 	*/
+ 	
+ 	// 1. 5초 뒤에 redbird가 사라지도록
+ 	
+ 	setTimeout(()=>{
+ 	$('img').hide();
+ 	alert('숨었다.');
+ 	},5000);
+ 	
+ 	
+ 	// 2. 7초 뒤에 다시 나타나도록.. 이때 alert창으로 나타났다는 메세지도 함께 출력
+ 	setTimeout(()=>{
+ 	$('img').show();
+ 	alert('짜잔.');
+ 	},7000);
+ 	
+ }); //ready
+</script>
+<style type="text/css">
+	img{width :65px; height:65px; background:orange; position:relative;}
+</style>
+</head>
+<body>
+	<img alt="" src="../image/redbird.png">
+</body>
+</html>

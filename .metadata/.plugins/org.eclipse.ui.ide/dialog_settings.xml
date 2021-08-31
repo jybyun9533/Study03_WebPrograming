@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\encore_bjy\TeamProject\Prac\project"/>
+			<item value="C:\encore_bjy\TeamProject"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\TeamProject01\project"/>
+			<item value="C:\encore_bjy\TeamProject\Project01\project"/>
+			<item value="C:\encore_bjy\workshop_doc\9주차\0422\FruitCart_1"/>
+			<item value="C:\encore_bjy\workshop_doc\9주차\0422\FruitCart_2"/>
+			<item value="C:\encore_bjy\workshop_doc\8주차\0414\front04_Workshop_solv1"/>
+			<item value="C:\encore_bjy\workshop_doc\7주차\0408\Workshop08_solv"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\Workshop06_solv"/>
+			<item value="C:\encore_bjy\workshop_doc\7주차\0406\Workshop06_solv"/>
+			<item value="C:\encore_bjy\workshop_doc\7주차\0405\web14_HttpSession1"/>
+			<item value="C:\encore_bjy\workshop_doc\7주차\0405\web14_HttpSession"/>
+			<item value="C:\encore_bjy\workshop_doc\6주차\0402\04Workshop_sol"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\Workshop01"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\web05_Upgrade"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\web04_Downgrade"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\web03_HttpServlet"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\web02_GenericServlet"/>
+			<item value="C:\encore_bjy\eclipse\03_webWorkspace\web01_WAS"/>
+		</list>
+	</section>
+</section>

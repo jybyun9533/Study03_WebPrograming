@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>append, after, prepend, before</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	 $(function(){
+ 		$('div')
+ 		.append('<span>1.Append</span>')
+ 		.after('<span>2.After</span>')
+ 		.prepend('<span>3.prepend</span>')
+ 		.before('<span>4.before</span>');
+ 	}); //ready
+</script>
+<style type="text/css">
+	body{
+	 	padding:50px;
+	}
+	
+	div{
+		border:2px solid #bbb;
+		padding :10px;
+		margin:10px auto;
+		background-color :#eee;
+	}
+	span{
+		display:block;
+		width:65px;
+		font:bold 12px;
+		color: white;
+		background:black;
+		padding: 5px 10px;
+	}
+</style>
+</head>
+<body>
+	<div>
+	function
+Type: Function( Integer index, String html ) => htmlString or Element or Text or jQuery
+A function that returns an HTML string, DOM element(s), text node(s), or jQuery object to insert at the end of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set.
+	</div>
+</body>
+</html>

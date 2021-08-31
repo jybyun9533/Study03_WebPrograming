@@ -1,0 +1,39 @@
+package project.model;
+
+public class Menu {
+	// Field
+	private String menuId;
+	private int menuType; // 1:pizza, 2:sidemenu, 3:topping
+	private String menuName;
+	private int menuPrice;
+	private String menuSize;
+	private String menuDesc;
+	
+	// Constructor
+	public Menu() {
+	}
+	
+	public Menu(String menuId, int menuType, String menuName, int menuPrice, String menuSize, String menuDesc) {
+		super();
+		this.menuId = menuId;
+		this.menuType = menuType;
+		this.menuName = menuName;
+		this.menuPrice = menuPrice;
+		this.menuSize = menuSize;
+		this.menuDesc = menuDesc;
+	}
+	
+	public Menu(String menuId, int menuType, String menuName, int menuPrice, String menuSize, String menuDesc) {
+		super();
+		this.menuId = menuId;
+		this.menuType = menuType;
+		this.menuName = menuName;
+		this.menuPrice = menuPrice;
+		this.menuSize = menuSize;
+		this.menuDesc = menuDesc;
+	}
+	
+	
+	
+	
+}

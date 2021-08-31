@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2></h2>
+
+<script type="text/javascript">
+	function Product(pname, price, cnt){ //생성자 함수는 함수와 구분하기 위해서 대문자로 시작해주는 것이 좋다.
+		this.pname = pname;
+		this.price = price;
+		this.cnt = cnt;
+		
+		//this.메소드
+		this.buy = function(){
+			//메소드가 하는 일을 정의...브라우저에 정보를 출력
+			document.write('<h2>구매한 상품 정보 보기</h2>');
+			document.write('<h3>물건명 : '+this.pname+'</h3>');
+			document.write('<h3>가 격 : '+this.price+'</h3>');
+			document.write('<h3>갯 수 : '+this.cnt+'</h3>');
+			document.write('<h3>총 합 : '+(this.cnt * this.price)+'</h3>');
+		}
+	}
+	
+	//객체 생성
+	var p1 = new Product('Notebook1', 1000000, 3);
+	var p2 = new Product('Notebook2', 2000000, 6);
+	var p3 = new Product('Notebook3', 3000000, 1);
+	
+	//함수 호출
+	p1.buy();
+	document.write('<h3>=================================================================</h3>');
+	
+	p2.buy();
+	document.write('<h3>=================================================================</h3>');
+	
+	p3.buy();
+	document.write('<h3>=================================================================</h3>');
+</script>
+</body>
+</html>

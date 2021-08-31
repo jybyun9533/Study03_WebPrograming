@@ -1,0 +1,11 @@
+package project.model;
+
+public class Order {
+	private String orderId;
+	private String custId;
+	private String shopId;
+	private String orderDate;
+	private String orderAddr;
+	private int orderPrice;
+	
+}

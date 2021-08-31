@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	var key, val, entries;
+
+	$(function(){
+ 		showAll(); // 로컬 스토리지에 저장된 값을 전부 불러오기
+ 
+ 
+ 		$('#save').click(function () {
+ 			var kval = $('#k').val();
+ 			var vval = $('#v').val();
+    
+    		localStorage.setItem(kval,vval);
+    		$('#k').val("");
+    		$('#v').val("");
+    		$('#k').focus();
+    		showAll();
+		});
+ 	
+ 	
+	 	$('#remove').click(function () {
+ 			var kval = $('#k').val();
+	    
+    		localStorage.removeItem(kval);
+	    	$('#k').val("");
+    		$('#v').val("");
+    	
+    		showAll();
+		});
+ 	
+
+ 		$('#entries').change(function () {
+	 		var str = $(this).val();
+    		$('#k').val(str);
+		});
+
+	
+		function showAll(){
+			key = document.getElementById("k");
+			val = document.getElementById("v");
+			entries = document.getElementById("entries");
+			
+			entries.innerHTML = ""; // 이전에 select에 출력되어져 있던것들 삭제
+			for(var i=0; i< localStorage.length; i++){
+				var k = localStorage.key(i);
+				entries.options[entries.options.length] = new Option(k+" : "+localStorage[k], k);
+			} 
+		}
+    
+
+ 	}); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<h1>LocalStorage View</h1>
+	키 : <input type="text" id="k"><br>
+	값 : <input type="text" id="v"><br>
+	<button id = "save">저장</button>
+	<button id = "remove">삭제</button>
+	<hr>
+	<select id = "entries" size =5>
+		
+	</select>
+</body>
+</html>

@@ -1,0 +1,27 @@
+package project.model;
+
+public class Order {
+	// Field
+	private String orderId;
+	private String custId;
+	private String shopId;
+	private String orderDate;
+	private String orderAddr;
+	private int orderPrice;
+	
+	//Constructor
+	public Order() {
+	}
+	
+	public Order(String orderId, String custId, String shopId, String orderDate, String orderAddr, int orderPrice) {
+		super();
+		this.orderId = orderId;
+		this.custId = custId;
+		this.shopId = shopId;
+		this.orderDate = orderDate;
+		this.orderAddr = orderAddr;
+		this.orderPrice = orderPrice;
+	}
+	
+	
+}

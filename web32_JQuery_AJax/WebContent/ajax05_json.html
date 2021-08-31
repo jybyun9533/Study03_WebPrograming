@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+ 		$('#jsonBtn').click(function () {
+    		$.ajax({
+    			type : 'post',
+    			url : 'JsonServlet',
+    			dataType:'json',
+    			
+    			success:function (data) {
+    				// 특정 영역에 객체의 내용을 출력.
+    				$('#resultView').html("<font color=green> region : " + data.region +", wind : "+ data.wind +"</font>");
+     				} // callback
+    			
+    		});//ajax
+		}); //click
+	}); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<h2>JSON</h2>
+	<input type="button" value="json-object" id="jsonBtn"><br>
+	<span id ="resultView"></span>
+</body>
+</html>

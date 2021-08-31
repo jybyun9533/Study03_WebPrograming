@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	// 각각의 이미지에 마우스를 갖다대면 현재 크기보다 2배로 더 커지고
+ 	// 이미지에서 마우스가 벗어나면 원래의 크기로 돌아오도록..hover() 함수를 선택자에 잘 적용해보세요.
+ 	$('img').hover(function () {
+    	$(this).addClass('larger');
+    	}, function () {
+    	$(this).removeClass('larger');
+	}) // hover
+	
+ }); //ready
+</script>
+<style type="text/css">
+	.larger{width:200px; height:200px ;border:2px solid red;}
+</style>
+</head>
+<body>
+	<h2>Bigger Image</h2>
+	<img alt="" src= "../image/1.jpg" width="100"><br>
+	<img alt="" src= "../image/2.jpg" width="100" height="100"><br>
+	<img alt="" src= "../image/3.jpg" width="100"><br>
+</body>
+</html>

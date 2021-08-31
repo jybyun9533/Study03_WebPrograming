@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		//1. 버튼 클릭하면 함수 호출...버튼의 타이틀이 resultView 영역에 출력되도록 로직을 작성...html(),text()
+		$('#createBtn').click(function() {
+			//$('#resultView').html($(this).val());
+			
+			/* var result=$('#resultView').html();
+			$('#resultView').html(result+$(this).val()+'<p>'); */
+			
+			$('#resultView').append($(this).val()+'<p>');
+		});//click
+		
+		//2. select폼에서 내가 선택한 option의 값이 resultView 영역에 뿌려지도록 로직을 작성
+		/* $('#createSel').change(function() {
+			var result=$('#resultView').html();
+			var item = $('#createSel>option:selected').val();
+			//alert(item);			
+			$('#resultView').html(result+item+'<p>');
+		}); */
+		
+		//3.
+		$('#createSel').change(function() {
+			var result=$('#resultView').html();				
+			$('#resultView').html(result+$(this).val()+'<p>');
+		});
+		
+		
+	}); 
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<input type="button" value="버튼 클릭시 동적으로 문자열 생성하기" id="createBtn">
+	<select id="createSel">
+		<option>Encore Academy 교대지점</option>
+		<option>Encore Academy 남부지점</option>
+		<option>Encore Academy 영등포지점</option>
+		<option>Encore Academy 판교지점</option>
+		<option>Encore Academy 역삼지점</option>
+	</select>
+	
+	<div id="resultView"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

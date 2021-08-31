@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		//h2, p태그를 한꺼번에 선택자로 지정....열거형...css('속성이름','속성값') 글자색깔을 orange로
+		$('h2, p').css('color','orange');
+		
+		//div태그의 자식을 선택자로 지정...글자색을 red
+		$('div p').css('color','red'); //후손
+		$('div>p').css('color','green'); //직계자식
+		
+		//p태그 중에서 첫번째 p태그를 선택자로 지정...배경색을 gray
+		//$('p:first').css('background','gray');
+		//$('p').first().css('background','gray');
+		$('p:eq(0)').css('background','gray');
+		
+		//$('p').last().css('background','gray');
+		//$('p:last').css('background','gray');
+		$('p:eq(2)').css('background','gray');
+		
+		$('.content').css('border','1px solid blue');
+		
+		//p태그의 class속성 값이 theme인 선택자를 지정, 글자색을 blue
+		$('p.theme').css('color','blue');
+	}); 
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h2 id="headetr">What is Jquery?</h2>
+<div>
+	<p>jQuery is a fast, small, and feature-rich JavaScript library. </p>
+</div>
+<p class="content">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+<p class="content theme">New theme: New theme: Our long-time default grayscale theme Smoothness has been succeeded by a modern theme with some colors, less gradients and some other improvements.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

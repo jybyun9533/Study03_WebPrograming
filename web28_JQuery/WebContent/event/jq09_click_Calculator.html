@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.button{
+		width:50px;
+		height:50px;
+		margin:2px;
+	}
+	
+	#pad{
+		width:240px;
+		height:240px;
+		border: 1px solid black;
+		margin-top : 15px;
+	}
+
+</style>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+	var fomula = "";
+
+	$(function(){
+		$('input[type=button]').click(function(){
+			var input = $(this).val();
+			
+			if(input=='CE'){
+				fomula="";
+				$('#result').val(fomula);
+			} else if(input == '='){
+				$('#result').val(eval(fomula));
+			} else{
+				fomula += input;
+				$('#result').val(fomula);
+			}
+			
+		});
+	});
+</script>
+</head>
+<body>
+		<input type="text" id="result" name="result" value="0.0" size=33px/>
+		<div id="pad">
+			<input type="button" id="7" value="7" class="button" />
+			<input type="button" id="8" value="8" class="button" />
+			<input type="button" id="9" value="9" class="button" />
+			<input type="button" id="+" value="+" class="button" />
+			<input type="button" id="4" value="4" class="button" />
+			<input type="button" id="5" value="5" class="button" />
+			<input type="button" id="6" value="6" class="button" />
+			<input type="button" id="-" value="-" class="button" />
+			<input type="button" id="1" value="1" class="button" />
+			<input type="button" id="2" value="2" class="button" />
+			<input type="button" id="3" value="3" class="button" />
+			<input type="button" id="*" value="*" class="button" />
+			<input type="button" id="0" value="0" class="button" />
+			<input type="button" id="CE" value="CE" class="button" />
+			<input type="button" id="=" value="=" class="button" />
+			<input type="button" id="/" value="/" class="button" />
+		</div>		
+</body>
+</html>

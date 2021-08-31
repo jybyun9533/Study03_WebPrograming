@@ -1,0 +1,13 @@
+package project.model;
+
+public class Customer {
+	private String custId;
+	private String custPw;
+	private String custName;
+	private String custAddr;
+	private String custContact;
+	private String custEmail;
+	private String custTotalPrice;
+	
+	
+}

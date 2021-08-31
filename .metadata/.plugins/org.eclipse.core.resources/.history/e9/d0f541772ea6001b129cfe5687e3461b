@@ -1,0 +1,21 @@
+package project.model;
+
+public class OrderDesc {
+	// Field
+	private String orderId;
+	private String menuId;
+	private int num;
+	
+	// Constructor
+	public OrderDesc() {
+	}
+	
+	public OrderDesc(String orderId, String menuId, int num) {
+		super();
+		this.orderId = orderId;
+		this.menuId = menuId;
+		this.num = num;
+	}
+	
+	
+}

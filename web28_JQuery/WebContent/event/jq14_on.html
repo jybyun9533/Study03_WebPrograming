@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>on() :: 미래에 존재할 태그에 이벤트(click)를 적용하는 함수</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+ 	// div 영역을 클릭하면 함수가 호출되도록.. p태그 부분에 <h2>Encore PlayData</h2>
+ 	
+ 	/*
+ 	$('div').click(function () {
+    	$('p').append("<h2>Encore PlayData</h2>")
+	});
+	*/
+	
+	/*
+	$('div').bind('click',function () {
+    	$('p').append("<h2>Encore PlayData</h2>")
+	});
+	*/
+	
+	/*
+	$('div').one('click',function () {
+    	$('p').append("<h2>Encore PlayData</h2>")
+	});
+	*/
+	
+	$('div').click(function () {
+    	$('#future').append("<h2>Encore PlayData</h2>")
+	});
+	
+	// 처음에는 없었지만 나중에 동적으로 생성될 태그ㅔ 이벤트를 적용하는 함수 on()
+	$('#future').on('click', '#hello', onhello());
+	
+	function onhello() {
+    alert("onhello calling");
+	}
+	
+	
+	
+ }); //ready
+</script>
+<style type="text/css">
+	div{border-radius : 10px; border:1px solid red;}
+	#future{border:1px solid green}
+</style>
+</head>
+<body>
+	<div>
+		<h1>$(selector).on()</h1>
+		<p>on함수 사용 :: 클릭함수와 동일하지만 차이점 존재</p>
+	</div>
+	<div id="future"></div>
+</body>
+</html>

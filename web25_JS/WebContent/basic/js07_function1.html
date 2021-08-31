@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수 재정의 동작원리1</title>
+<script type="text/javascript">
+	function calc(x,y){
+		return x+y;
+	}
+	console.log(calc(5,3)); //8
+	
+	function calc(x,y){
+		return x*y;
+	}
+	console.log(calc(5,3)); //15
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

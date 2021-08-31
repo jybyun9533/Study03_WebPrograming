@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		/*  addClass()를 이용해서 분리시킴 styler 속성값을 이곳에 적용시킨다.*/
+		$('h2, p').addClass('totalColor');		
+		
+		$('div p').addClass('divP');			
+		
+		$('p:eq(0)').addClass('firstP');	
+	
+		$('p:eq(2)').addClass('lastP');	
+		
+		$('.content').addClass('content');		
+		
+		$('p.theme').addClass('pTheme');	
+	}); 
+</script>
+<style type="text/css">
+	.totalColor{ color : orange}
+	.divP{ color : red}
+	.firstP{ background : gray}
+	.lastP{ background : gray}
+	.content{ border: 1px solid blue}
+	.pTheme{color : blue}
+</style>
+</head>
+<body>
+<h2 id="headetr">What is Jquery?</h2>
+<div>
+	<p>jQuery is a fast, small, and feature-rich JavaScript library. </p>
+</div>
+<p class="content">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+<p class="content theme">New theme: New theme: Our long-time default grayscale theme Smoothness has been succeeded by a modern theme with some colors, less gradients and some other improvements.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {	
+	/*  폼선택자.submit()
+	1. id, password 폼의 공란을 체크...공백일때 alert창 띄우고..포커스 맞추고, 페이지 안넘어가도록
+	2. checkbox에 반드시 하나 이상의 값이 체크  되도록..하나도 선택을 안하면 alert창 띄우고
+	3. checkbox에 하나 이상의 값이 체크되었다면 each() 함수 사용해서 선택된 값을 alert창으로 출력
+	4. confirm창 이용해서 "3개의 취미가 선택되었습니다...전송하시겠습니까?" ---05_result.jsp 전송되도록
+	
+	*/
+	$('#frm').submit(function() {
+		if($('#id').val() ==""){
+			alert("아이디를 입력!!");
+			$('#id').focus();
+			return false;
+		}
+		if($('#pass').val() ==""){
+			alert("패스워드를 입력!!");
+			$('#pass').focus();
+			return false;
+		}
+		
+		var hobbyArr = $('input[name=hobby]:checked');
+		//alert(hobbyArr.length);
+		var text='';
+		if(hobbyArr.length==0){
+			alert("하나 이상의 취미는 선택!!");
+			return false;
+		}else{
+			$.each(hobbyArr, function(index, item) {
+				text +=$(this).val()+" ";
+			});//each
+			alert(text);
+			
+			return confirm("선택하신 "+hobbyArr.length+" 개의 취미를 전송하시겠습니까?");
+		}
+	});//submit
+});//ready
+</script>
+</head>
+<body>
+<form action="05_result.jsp" id="frm">
+ID : <input type="text" name="id" id="id"><p>
+PASSWORD : <input type="password" name="pass" id="pass"><p><p>
+
+<strong>당신의 취미를 고르세요</strong><br/>
+<input type="checkbox" name="hobby" value="Reading">Reading<br/>
+<input type="checkbox" name="hobby" value="Walking">Walking<br/>
+<input type="checkbox" name="hobby" value="Listen to Music">Listen to Music<br/>
+<input type="checkbox" name="hobby" value="Drinking">Drinking<br/><br/>
+
+<input type="submit" value="SEND">
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

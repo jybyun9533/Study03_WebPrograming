@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/sunny/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  /* 
+  	정적인 데이타 내용이 tab의 내용으로 나오는 것이 아니라
+  	프로그램이 실행한 결과의 동적인 내용이 나오도록 수정
+  */
+  $( function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="tabpage/content1.jsp">건강 상식</a></li> <!-- content1.do -->
+    <li><a href="tabpage/content2.jsp">정치 현황</a></li>
+    <li><a href="tabpage/content3.jsp">부동산 상식</a></li>
+  </ul>
+</div>
+ 
+ 
+</body>
+</html>
